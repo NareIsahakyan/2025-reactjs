@@ -1,6 +1,6 @@
 
 import './App.css';
-import Autorization from "./components/autorization/Autorization";
+import Autorization from "./components/autorization/autorization";
 import './components/autorization/autorization.css'
 import UserProfile from './components/profile/UserProfile';
 import { AuthProvider } from './context/authContext';

@@ -3,7 +3,7 @@ import { login, verify } from "../../services/api/auth";
 import AuthContext from "../../context/authContext";
 
 const Autorization = () => {
-    const {login:contextLogin,logout} = useContext(AuthContext)
+    const {login:contextLogin,isAutorization,logout} = useContext(AuthContext)
     const [isShow, setIsShow] = useState(false);
 
     const [data, action, isProgress] = useActionState(async (data, state) => {
@@ -37,11 +37,10 @@ const Autorization = () => {
                     }
                     return { data, error: null }
                 } catch (error) {
-                    return { data: {}, error: "Sonething went wrong" }
+                    return { data: {}, error: "Something went wrong" }
                 }
     
             }
-            return { data: { email }, error: null }
         }
        
     }, { data: {}, error: null });
@@ -49,11 +48,11 @@ const Autorization = () => {
     return (
         <div className="autorization">
             <h1>Login</h1>
-            <form action={action}>
+            {isAutorization ? <button onClick={logout}>Logout</button>:<form action={action}>
                 <input type="email" name="email" placeholder="Email" />
                 {isShow && <input type="text" name="otp" placeholder="OTP" />}
                 <button type="submit">Login</button>
-            </form>
+            </form>}
         </div>
     )
 }

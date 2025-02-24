@@ -1,4 +1,4 @@
-.autorization {
+.getMe {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,13 +11,7 @@
     border-radius: 5%;
 }
 
-.loginPage {
-    color: rgb(81, 81, 112);
-    align-items: center;
-    margin-left: 210px;
-}
-
-.autorization input {
+.getMe input {
     width: 300px;
     height: 20px;
     border-radius: 5px;
@@ -28,7 +22,7 @@
     margin-left: 100px;
 }
 
-.autorization button {
+.getMe button {
     width: 305px;
     height: 24px;
     border-radius: 5px;

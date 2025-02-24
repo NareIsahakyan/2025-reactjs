@@ -1,7 +1,7 @@
 import { createContext, useCallback, useEffect, useState } from "react";
 import { getMe } from "../services/api/auth";
 import { api } from "../services/api/api";
-import Autorization from "../components/autorization/autorization";
+
 
 const AuthContext=createContext();
 export default AuthContext;
